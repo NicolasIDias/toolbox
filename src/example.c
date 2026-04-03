@@ -4,8 +4,8 @@
 
 int main(void)
 {
-    int   a = 10;
-    int   b = 42;
+    int a = 10;
+    int b = 42;
     float x = 1.5f;
     float y = 3.25f;
 
@@ -22,6 +22,13 @@ int main(void)
     LOG_INFO("[INFO] floats: x=%.2f y=%.2f\n", x, y);
 
     LOGGER("[RAW] mixed: a=%d, y=%.2f\n", a, y);
+
+    printf("\n== ABS examples ==\n");
+
+    LOG_INFO("[INFO] ints: a=%d b=%d\n", ABS(a), ABS(-b));
+    LOG_INFO("[INFO] floats: x=%.2f y=%.2f\n", ABS(x), ABS(-y));
+
+    LOGGER("[RAW] mixed: a=%d, y=%.2f\n", ABS(-a), ABS(-y));
 
     return 0;
 }
