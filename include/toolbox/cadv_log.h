@@ -20,3 +20,4 @@ static inline void log_info(const char *fmt, ...)
     {                               \
         log_info(fmt, __VA_ARGS__); \
     } while (0)
+    
