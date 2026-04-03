@@ -1,3 +1,5 @@
+#include <toolbox/cadv_bool.h>
+
 static inline float MAX_FLOAT(float x, float y) { return ((x > y) ? (x) : (y)); }
 static inline int MAX_INT(int x, int y) { return ((x > y) ? (x) : (y)); }
 
