@@ -12,3 +12,6 @@ static inline int MIN_INT(int x, int y) { return ((x < y) ? (x) : (y)); }
     int: MIN_INT,               \
     float: MIN_FLOAT)(x, y)
 
+
+#define ROUND(x) ((long long)((x) + 0.5))
+#define EPSILON (1e-9)
