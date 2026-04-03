@@ -39,5 +39,13 @@ static inline float SIGN_FLOAT(float x) { return ((x < 0.0f) ? -1.0f : (x >= 1.0
     int: SIGN_INT,            \
     float: SIGN_FLOAT)(x)
 
+static inline bool IN_RANGE_INT(int val, int low, int high) { return ((val > high || val < low) ? false : true); }
+static inline bool IN_RANGE_FLOAT(float val, float low, float high) { return ((val > high || val < low) ? false : true); }
+
+#define IN_RANGE(val, low, high) _Generic((val), \
+    int: IN_RANGE_INT,                           \
+    float: IN_RANGE_FLOAT)(val, low, high)
+
+
 #define ROUND(x) ((long long)((x) + 0.5))
 #define EPSILON (1e-9)
